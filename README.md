@@ -8,7 +8,7 @@ Este repositorio contiene el flujo de trabajo completo para el desarrollo de un 
 - **NumPy** para operaciones vectoriales  
 - **Scikit-learn** para cálculos de similitud (cosine similarity)  
 - **Jupyter Notebook** para el desarrollo interactivo  
-- **The Moivie Dataset** Dataset de peliculas
+- **The Moivie Dataset** Dataset de peliculas (https://www.kaggle.com/datasets/rounakbanik/the-movies-dataset?resource=download)
 
 ## 📂 Estructura del Proyecto
 
