@@ -79,4 +79,4 @@ El uso de un promedio simple para el perfil de usuario no captura la intensidad 
 
 **3. Escalabilidad y Búsqueda Rápida**
 
-Para catálogos con cientos de miles o millones de películas, la búsqueda de similitud lineal se vuelve inviable y lento
+Para catálogos con cientos de miles o millones de películas, la búsqueda de similitud lineal se vuelve inviable y lento. Para saber qué recomendarte, el sistema te compara con cada una de las 10,000 películas del catálogo, una por una.
