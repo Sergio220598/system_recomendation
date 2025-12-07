@@ -51,3 +51,32 @@ Este notebook es el corazón del proyecto y se encarga de la lógica algorítmic
 **6.**. Se filtran las películas que el usuario ya vio y se ordenan las restantes por similitud.
 
 **7.** Se devuelven las películas más parecidas como recomendaciones personalizadas.
+
+## 🌐 Implementación API (FastAPI)
+El archivo main.py contiene una aplicación FastAPI que expone la función de recomendación como un endpoint. Esto permite que el sistema pueda ser consumido por aplicaciones web, móviles o servicios de backend.
+
+*ejcutar* uvicorn main:app --reload
+
+**ENDPOINT GET**:   /recommendations/{user_id}
+
+**Descripcion**: Retorna una lista del top N de películas recomendadas para el user_id especificado.
+
+**Parametros**: 
+
+*user_id*: El ID único del usuario para el cual se desea generar la recomendación.
+
+*top_n*: El número máximo de películas que deben retornar las recomendaciones. (Opcional, por defecto es 5)
+
+## ✨ Mejoras del proyecto
+
+**1. Optimización del Rendimiento**
+
+El sistema actual realiza operaciones costosas en cada llamada a la función de recomendación. Abre los archivos CSV y vuelve a calcular las matrices, lo que impacta negativamente el rendimiento.
+
+**2. Calidad de la Recomendación**
+
+El uso de un promedio simple para el perfil de usuario no captura la intensidad de los gustos.Si calificaste una película con 4/5 y otra con 5/5, el sistema las trata como si te hubieran gustado exactamente igual. Asimismo Implementar estrategia de Cold Start para recomendacion de nuevos usuarios.
+
+**3. Escalabilidad y Búsqueda Rápida**
+
+Para catálogos con cientos de miles o millones de películas, la búsqueda de similitud lineal se vuelve inviable y lento
